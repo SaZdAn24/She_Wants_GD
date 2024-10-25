@@ -1,0 +1,312 @@
+/* Общие стили */
+body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8edde;
+}
+
+/* Фоновый узор */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-image: url('imeges/'); /* Добавьте путь к фоновому изображению */
+    background-repeat: repeat;
+}
+
+/* Стили для логотипа */
+.logo img {
+    max-width: 100px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* Навигация */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    position: relative;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #D4AF37; /* Цвет, похожий на золотой для акцента */
+}
+
+/* Подменю */
+nav ul li .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav ul li:hover .submenu {
+    display: block;
+}
+
+nav ul li .submenu li {
+    margin: 0;
+}
+
+nav ul li .submenu li a {
+    padding: 10px 20px;
+    white-space: nowrap;
+    display: block;
+    font-size: 16px;
+}
+
+nav ul li .submenu li a:hover {
+    background-color: #f8f8f8;
+}
+
+
+/* Социальные иконки */
+.social-icons {
+    display: flex;
+    align-items: center;
+}
+
+.social-icons a {
+    margin-left: 10px;
+}
+
+.social-icons img {
+    height: 25px;
+}
+
+/* Стили для секции "О нас" */
+.about {
+    background-image: url('imeges/zastawka.png'); /* Замените на путь к вашему изображению */
+    background-size: cover;
+    background-position: center;
+    padding: 60px 0;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .about h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .about .about-content {
+   height: 500px;
+    width: 900px;
+  }
+  
+  .about p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+   /* Общий стиль секции */
+   
+  .zabiegi {
+    padding: 50px 0;
+    background-color: #fff;
+    color: #333;
+  }
+  
+  .zabiegi h2 {
+    text-align: center;
+    font-size: 36px;
+    color: #8a6956;
+    margin-bottom: 40px;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .grid-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+  }
+  
+  .grid-item img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    filter: grayscale(20%);
+    z-index: 0; /* Устанавливаем z-index ниже overlay */
+
+  }
+  
+  .grid-item.large {
+    grid-column: span 2;
+  }
+  
+  .grid-item:hover img {
+    transform: scale(1.1);
+    filter: grayscale(0);
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Прозрачный темный фон для контраста */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 1; /* Ставим начальное значение 1, чтобы текст всегда был виден */
+    text-align: center;
+    padding: 20px;
+    z-index: 1; /* Убедимся, что overlay выше картинки */
+}
+
+.overlay h3 {
+    color: #fff;
+    font-size: 24px;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 10px;
+}
+
+.overlay p {
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.4;
+}
+.cta-button {
+    display: inline-block;
+    margin-top: 50px;
+    padding: 12px 24px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #ca9889; /* Выберите подходящий оттенок розового */
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-family: 'Raleway', sans-serif;
+}
+
+.cta-button:hover {
+    background-color: #c27b68; /* Более темный оттенок розового для эффекта при наведении */
+    transform: scale(1.05);
+}
+/* контакты */
+.booksy-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 24px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #d18a74; /* Нежно-розовый оттенок */
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-family: 'Raleway', sans-serif;
+  }
+  
+  .booksy-button:hover {
+    background-color: #c27b68; /* Темнее при наведении */
+    transform: scale(1.05);
+  }
+  .contact {
+    padding: 50px 0;
+    background-color: #fff;
+    color: #333;
+  }
+  
+  .contact h2 {
+    text-align: center;
+    font-size: 36px;
+    color: #8a6956; /* Цвет, подобранный под стиль аккаунта */
+    margin-bottom: 40px;
+    font-family: 'Raleway', sans-serif;
+  }
+  
+  .contact-details p {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0;
+    font-family: 'Raleway', sans-serif;
+  }
+  
+  .contact-details a {
+    color: #d18a74; /* Мягкий розовый цвет */
+    text-decoration: none;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+  
+  .contact-form h3 {
+    font-size: 24px;
+    color: #8a6956;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 20px;
+  }
+  
+  .contact-form input, .contact-form textarea {
+    padding: 12px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: 'Raleway', sans-serif;
+  }
+  
+  .contact-form button {
+    padding: 12px 24px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #d18a74;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Raleway', sans-serif;
+  }
+  
+  .contact-form button:hover {
+    background-color: #c27b68;
+  }
+  
+  .map iframe {
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+  }
+  .nav-link.active {
+    color: #D4AF37;
+    font-weight: bold;
+  }
