@@ -21,23 +21,31 @@ document.getElementById("contact-form").addEventListener("submit", function(even
             alert('Ошибка: ' + JSON.stringify(error)); // Уведомление об ошибке
         });
 });
+// Данные для поиска, соответствующие секциям страницы
+const searchSections = {
+    "о нас": "#about",
+    "услуги": "#services",
+    "контакты": "#contact",
+    "главная": "#home"
+};
 
-// Закрытие модального окна
-document.querySelector(".close-button").addEventListener("click", function() {
-    const modal = document.getElementById("confirmation-modal");
-    modal.style.display = "none"; // Скрыть модальное окно
-
-    // Очистка формы
-    document.getElementById("contact-form").reset(); // Сброс значений формы
+// Показать или скрыть поле поиска
+document.getElementById('toggle-search').addEventListener('click', function() {
+    const searchContainer = document.querySelector('.search-container');
+    searchContainer.style.display = (searchContainer.style.display === 'none' || searchContainer.style.display === '') ? 'flex' : 'none';
 });
 
-// Закрытие модального окна при клике вне его
-window.onclick = function(event) {
-    const modal = document.getElementById("confirmation-modal");
-    if (event.target == modal) {
-        modal.style.display = "none"; // Скрыть модальное окно
+// Обработка поиска и переход к нужной секции
+document.getElementById('search-button').addEventListener('click', function() {
+    const query = document.getElementById('search-input').value.trim().toLowerCase();
+    const targetSection = searchSections[query];
 
-        // Очистка формы
-        document.getElementById("contact-form").reset(); // Сброс значений формы
+    if (targetSection) {
+        // Прокрутка к выбранной секции
+        document.querySelector(targetSection).scrollIntoView({ behavior: 'smooth' });
+        document.getElementById('search-input').value = ''; // Очистка поля поиска
+        document.querySelector('.search-container').style.display = 'none'; // Скрыть поле поиска после поиска
+    } else {
+        alert('Секция не найдена. Попробуйте другой запрос.');
     }
-};
+});

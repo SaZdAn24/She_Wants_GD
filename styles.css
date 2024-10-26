@@ -49,7 +49,6 @@ body {
   background-color: var(--background-color);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
-
 /* Логотип и текст бренда */
 .logo {
   display: flex;
@@ -132,38 +131,70 @@ nav ul li .submenu li a:hover {
 }
 
 /* Кнопка записи и иконка поиска */
-.actions {
+.search-container {
   display: flex;
   align-items: center;
+  gap: 10px; /* Отступ между полем поиска и кнопкой */
 }
 
+
+#search-input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 5px; /* Отступ между полем и кнопкой */
+}
+
+#search-button {
+  padding: 8px 12px; /* Паддинг для кнопки поиска */
+  border-radius: 5px;
+  cursor: pointer; /* Указатель при наведении */
+  background: linear-gradient(90deg, #f9e49d, #d18a74); /* Градиент фона */
+  border: none; /* Без границ */
+}
+
+#search-button:hover {
+  background: linear-gradient(90deg, #f9e49d, #d18a74); /* Градиент фона */}
+
 .book-button {
-  display: inline-block;
-  background-color: #333;
+  display: flex; /* Используем flex для выравнивания иконки и текста */
+  align-items: center; /* Вертикальное выравнивание */
+  background: linear-gradient(90deg, #f9e49d, #d18a74); /* Градиент фона */
   color: #fff;
   padding: 8px 16px;
   margin-left: 20px;
+  margin-right: 10px; /* Уменьшаем отступ между кнопкой и иконкой */
+
   font-family: var(--main-font);
   font-weight: bold;
   font-size: 14px;
   text-transform: uppercase;
   border-radius: 5px;
   text-decoration: none;
-  transition: background-color 0.3s ease;
+  transition: transform 0.3s, background-color 0.3s; /* Плавная анимация */
 }
 
 .book-button:hover {
-  background-color: var(--gold-color);
+  transform: scale(1.05); /* Увеличение при наведении */
+  background: linear-gradient(90deg, #d18a74, #f9e49d); /* Изменение градиента */
 }
 
+.book-icon {
+  margin-right: 8px; /* Отступ между иконкой и текстом */
+  height: 20px; /* Высота иконки */
+  margin-left: 0px;
+}
 .search-icon {
-  margin-left: 15px;
+  background: none; /* Убираем фон */
+  border: none; /* Убираем границу */
+  cursor: pointer; /* Указатель при наведении */
+  padding: 0; /* Убираем внутренние отступы */
 }
 
 .search-icon img {
   height: 20px;
+  display: block; /* Убираем отступы вокруг изображения */
 }
-
 /* Стили для секции "О нас" */
 .about {
     background-image: url('imeges/zastawka.png'); /* Замените на путь к вашему изображению */
@@ -425,4 +456,100 @@ h2 {
 p {
   margin: 10px 0 0; /* Отступы для параграфа */
   font-size: 16px; /* Размер текста */
+}
+
+
+/* Адаптивный дизайн для iPhone 8 и iPhone 14 */
+@media only screen and (max-width: 390px) {
+  /* Уменьшаем отступы и размеры шрифта для небольших экранов */
+  
+  /* Основной отступ */
+  .top-bar,
+  .main-header,
+  .about,
+  .contact {
+      padding: 10px 20px;
+  }
+  
+  /* Логотип и текст бренда */
+  .logo img {
+      max-width: 60px;
+  }
+  .brand-text .brand-name {
+      font-size: 16px;
+  }
+  .brand-text .specialization {
+      font-size: 10px;
+  }
+  
+  /* Навигация */
+  nav ul {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+  nav ul li {
+      margin-right: 0;
+      margin-bottom: 10px;
+  }
+  nav ul li a {
+      font-size: 14px;
+  }
+  
+  /* Кнопка записи и поиска */
+  .book-button {
+      font-size: 12px;
+      padding: 6px 10px;
+  }
+  #search-input,
+  #search-button {
+      font-size: 12px;
+  }
+  
+  /* Секция о нас */
+  .about h2 {
+      font-size: 28px;
+  }
+  .about p {
+      font-size: 16px;
+  }
+  
+  /* Сетка услуг */
+  .grid {
+      grid-template-columns: 1fr; /* Одно изображение на строку */
+  }
+  .grid-item img {
+      height: 300px; /* Уменьшаем высоту изображений */
+  }
+  .overlay h3 {
+      font-size: 20px;
+  }
+  .overlay p {
+      font-size: 14px;
+  }
+  
+  /* Контактная форма */
+  .contact h2 {
+      font-size: 30px;
+  }
+  .contact-form input,
+  .contact-form textarea {
+      font-size: 14px;
+      padding: 10px;
+  }
+  .contact-form button {
+      font-size: 16px;
+      padding: 10px 20px;
+  }
+
+  /* Модальное окно */
+  .modal-content {
+      width: 90%; /* Ширина окна модального окна */
+      margin: 20% auto;
+  }
+  .modal-content h2 {
+      font-size: 18px;
+  }
+  .modal-content p {
+      font-size: 14px;
+  }
 }
