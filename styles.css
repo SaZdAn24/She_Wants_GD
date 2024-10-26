@@ -378,3 +378,51 @@ nav ul li .submenu li a:hover {
     color: #D4AF37;
     font-weight: bold;
   }
+
+  /* Стили для модального окна */
+.modal {
+  display: none; /* Скрыто по умолчанию */
+  position: fixed; /* Окно фиксируется */
+  z-index: 1000; /* Поверх всех элементов */
+  left: 0;
+  top: 0;
+  width: 100%; /* Ширина на всю страницу */
+  height: 100%; /* Высота на всю страницу */
+  overflow: auto; /* Прокрутка, если нужно */
+  background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный фон */
+}
+
+.modal-content {
+  background-color: #fff; /* Белый фон */
+  margin: 15% auto; /* Центрирование окна */
+  padding: 20px; /* Внутренние отступы */
+  border: none; /* Убираем рамку */
+  border-radius: 15px; /* Закругленные углы */
+  width: 300px; /* Ширина окна */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень для эффекта */
+  text-align: center; /* Центрирование текста */
+}
+
+.close-button {
+  color: #aaa; /* Цвет кнопки закрытия */
+  float: right; /* Правое выравнивание */
+  font-size: 28px; /* Размер шрифта */
+  font-weight: bold; /* Жирный шрифт */
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: black; /* Цвет при наведении */
+  text-decoration: none; /* Убираем подчеркивание */
+  cursor: pointer; /* Указатель при наведении */
+}
+
+h2 {
+  margin: 0; /* Убираем отступы */
+  font-size: 20px; /* Размер заголовка */
+}
+
+p {
+  margin: 10px 0 0; /* Отступы для параграфа */
+  font-size: 16px; /* Размер текста */
+}

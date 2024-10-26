@@ -31,7 +31,7 @@
   </div>
   <div class="language-switch">
     <a href="#" class="lang">PL</a> |
-    <a href="#" class="lang">IN</a> |
+    <a href="#" class="lang">EN</a> |
     <a href="#" class="lang">RU</a>
   </div>
 </header>
@@ -131,30 +131,44 @@
     </div>
   </section>  
   <footer>
-  <section id="contact" class="contact">
-  <div class="container">
-    <h2>Контакты</h2>
-    
-    <div class="contact-details">
-      <p><strong>Адрес:</strong> ul. Grunwaldzka 99, Gdańsk</p>
-      <p><strong>Телефон:</strong> <a href="tel:+48555555555">+48 555 555 555</a></p>
-      <p><strong>Email:</strong> <a href="mailto:info@shewants.pl">info@shewants.pl</a></p>
-    </div>
-    
-    <form id="contact-form" class="contact-form">
-      <h3>Онлайн-запись</h3>
-      <input type="text" name="name" placeholder="Ваше имя" required>
-      <input type="email" name="email" placeholder="Ваш email" required>
-      <input type="tel" name="phone" placeholder="Ваш телефон" required>
-      <textarea name="message" placeholder="Ваше сообщение" required></textarea>
-      <button type="submit">Записаться</button>
-      <a href="https://booksy.com/pl-pl/" class="booksy-button" target="_blank">Записаться через Booksy</a>
-    </form>
-    <div class="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2325.7697889833985!2d18.65372467682774!3d54.34337697259519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9898e48cc93d38b%3A0x6f6654eddd0a0dd7!2sSHE%20WANTS%20kosmetologia%2Fpaznokcie%2Fpiercing%2Fdepilacja%20laserowa!5e0!3m2!1sru!2spl!4v1729850489421!5m2!1sru!2spl" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2>Контакты</h2>
+        
+        <div class="contact-details">
+          <p><strong>Адрес:</strong> ul. Grunwaldzka 99, Gdańsk</p>
+          <p><strong>Телефон:</strong> <a href="tel:+48555555555">+48 555 555 555</a></p>
+          <p><strong>Email:</strong> <a href="mailto:info@shewants.pl">info@shewants.pl</a></p>
+        </div>
+        
+        <form id="contact-form" class="contact-form">
+          <h3>Онлайн-запись</h3>
+          <input type="text" name="from_name" placeholder="Ваше имя" required>
+          <input type="email" name="email" placeholder="Ваш email" required>
+          <input type="tel" name="phone" placeholder="Ваш телефон" required>
+          <textarea name="message" placeholder="Ваше сообщение" required></textarea>
+          <input type="hidden" name="to_name" value="She Wants Gdansk"> 
+          <button type="submit">Записаться</button>
+      </form>
+      <!-- Модальное окно подтверждения -->
+<!-- Модальное окно подтверждения -->
+<div id="confirmation-modal" class="modal">
+  <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <h2>Спасибо!</h2>
+      <p>Ваше сообщение успешно отправлено. Мы скоро с вами свяжемся!</p>
   </div>
-</section>
-</footer>
+</div>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2325.7697889833985!2d18.65372467682774!3d54.34337697259519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9898e48cc93d38b%3A0x6f6654eddd0a0dd7!2sSHE%20WANTS%20kosmetologia%2Fpaznokcie%2Fpiercing%2Fdepilacja%20laserowa!5e0!3m2!1sru!2spl!4v1729850489421!5m2!1sru!2spl" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+  <!-- Подключение вашего скрипта -->
+  <script src="script.js"></script>
+
 </body>
 </html>
