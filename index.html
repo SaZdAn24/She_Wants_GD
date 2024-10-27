@@ -8,25 +8,30 @@
     <meta property="og:title" content="She Wants Gdansk — медицинская косметология">
     <meta property="og:description" content="Кабинет медицинской косметологии в Гданьске: эпиляция, уход за кожей, PCA Skin и другие процедуры.">
     <meta property="og:image" content="https://shewants.pl/images/preview.jpg">
-    <link rel="icon" href="imeges/favicon.png" type="image/png">
+    <link rel="icon" href="assets/icons/favicon.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/cards.css">
+  <link rel="stylesheet" href="css/modalCards.css">
 </head>
 <body>
 <!-- Шапка с иконками и переключением языка -->
 <header class="top-bar">
   <div class="social-contact">
     <a href="https://www.instagram.com/she.wants.gdansk/" target="_blank">
-      <img src="imeges/instagram.png" alt="Instagram" class="icon">
+      <img src="assets/icons/instagram.png" alt="Instagram" class="icon">
     </a>
     <a href="https://www.facebook.com" target="_blank">
-      <img src="imeges/facebook.png" alt="Facebook" class="icon">
+      <img src="assets/icons/facebook.png" alt="Facebook" class="icon">
     </a>
     <a href="mailto:info@shewants.pl">
-      <img src="imeges/email.png" alt="Email" class="icon">
+      <img src="assets/icons/email.png" alt="Email" class="icon">
     </a>
     <a href="tel:+48555555555">
-      <img src="imeges/iphone.png" alt="Phone" class="icon">
+      <img src="assets/icons/iphone.png" alt="Phone" class="icon">
     </a>
   </div>
   <div class="language-switch">
@@ -39,7 +44,7 @@
 <!-- Основная часть сайта -->
 <header class="main-header">
   <div class="logo">
-    <img src="imeges/favicon.png" alt="She Wants Gdansk">
+    <img src="assets/icons/favicon.png" alt="She Wants Gdansk">
     <div class="brand-text">
       <span class="brand-name">She Wants Gdansk</span>
       <span class="specialization">Эстетическая медицина</span>
@@ -62,11 +67,13 @@
       <li><a href="#contact">Контакты</a></li>
     </ul>
   </nav>
+
  <!-- Кнопка записи на прием -->
 <a href="#contact-form" class="book-button">Записаться на прием</a>
+
 <!-- Кнопка поиска -->
 <button id="toggle-search" class="search-icon">
-    <img src="imeges/poisk.png" alt="Поиск">
+    <img src="assets/icons/poisk.png" alt="Поиск">
 </button>
 
 <div class="search-container" style="display: none;">
@@ -95,46 +102,7 @@
   <button class="tab-button" onclick="showContent('medycyna')">Медицинская косметология</button>
 </div>
 
-<section id="zabiegi" class="zabiegi"> </section>  
-
-    <!-- <div class="container">
-      <h2>Zabiegi Medycyny Estetycznej</h2>
-      <div class="grid">
-        <div class="grid-item large">
-          <div class="overlay">
-            <h3 href="#botox">Botox</h3>
-            <p>Redukcja zmarszczek mimicznych. Szybkie i trwałe efekty.</p>
-            <a href="#contact" class="cta-button">Zapisać się</a>
-          </div>
-          <img src="imeges/botox.jpg" alt="Botox">
-        </div>
-        <div class="grid-item">
-          <div class="overlay">
-            <h3>Kwas Hialuronowy</h3>
-            <p>Nawilżenie i wypełnienie zmarszczek. Widoczne efekty już po pierwszym zabiegu.</p>
-            <a href="#contact" class="cta-button">Zapisać się</a>
-          </div>
-          <img src="imeges/Kwas_Hialuronowy.jpg" alt="Kwas Hialuronowy">
-        </div>
-        <div class="grid-item">
-          <div class="overlay">
-            <h3>Mezoterapia</h3>
-            <p>Poprawa jędrności skóry oraz jej regeneracja.</p>
-            <a href="#contact" class="cta-button">Zapisać się</a>
-          </div>
-          <img src="imeges/mezo.jpg" alt="Mezoterapia">
-        </div>
-        <div class="grid-item">
-          <div class="overlay">
-            <h3>Lifting</h3>
-            <p>Naturalny efekt liftingu bez skalpela.</p>
-            <a href="#contact" class="cta-button">Zapisać się</a>
-          </div>
-          <img src="imeges/lifting.jpg" alt="Lifting">
-        </div>
-      </div>
-    </div> -->
- 
+<section id="zabiegi" class="zabiegi"> </section>   
   <footer>
     <section id="contact" class="contact">
       <div class="container">
@@ -155,6 +123,7 @@
           <input type="hidden" name="to_name" value="She Wants Gdansk"> 
           <button type="submit">Записаться</button>
       </form>
+
 <!-- Модальное окно подтверждения -->
 <div id="confirmation-modal" class="modal">
   <div class="modal-content">
@@ -169,14 +138,19 @@
       </div>
     </section>
   </footer>
+
 <!-- Результаты поиска -->
 <div id="search-results" class="search-results" style="display: none;">
   <h2>Результаты поиска:</h2>
   <ul id="results-list"></ul>
 </div>
+
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
-  <!-- Подключение вашего скрипта -->
-  <script src="script.js"></script>
+  <script src="js/formEmail.js"></script>
+  <script src="js/quest.js"></script>
+  <script src="js/formEmail.js"></script>
+  <script src="js/procedureСards.js"></script>
+
 
 </body>
 </html>

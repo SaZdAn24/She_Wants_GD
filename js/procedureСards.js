@@ -1,71 +1,4 @@
-// Инициализация EmailJS с вашим User ID
-(function() {
-    emailjs.init("tFJhhvUUdCaq7C1S-"); // Замените на ваш реальный User ID
-})();
 
-// Обработка отправки формы
-document.getElementById("contact-form").addEventListener("submit", function(event) {
-    event.preventDefault(); // Отменяем стандартное поведение формы
-
-    // Установка получателя (на ваш email)
-    this.to_name.value = 'sazdaniil2409@gmail.com'; // Укажите адрес, на который хотите получать сообщения
-
-    // Отправка формы
-    emailjs.sendForm('service_rs819hh', 'template_hs6z0rd', this)
-        .then(function() {
-            // Показать модальное окно
-            const modal = document.getElementById("confirmation-modal");
-            modal.style.display = "block"; // Показать модальное окно
-        }, function(error) {
-            console.error('Ошибка: ', error); // Лог ошибок в консоль
-            alert('Ошибка: ' + JSON.stringify(error)); // Уведомление об ошибке
-        });
-});
-// Данные для поиска, соответствующие секциям страницы
-const searchSections = {
-    "о нас": "#about",
-    "услуги": "#services",
-    "контакты": "#contact",
-    "главная": "#home",
-    "botox": "#botox"
-
-};
-
-// Показать или скрыть поле поиска
-document.getElementById('toggle-search').addEventListener('click', function() {
-    const searchContainer = document.querySelector('.search-container');
-    searchContainer.style.display = (searchContainer.style.display === 'none' || searchContainer.style.display === '') ? 'flex' : 'none';
-});
-
-// Обработка поиска и переход к нужной секции
-document.getElementById('search-button').addEventListener('click', function() {
-    const query = document.getElementById('search-input').value.trim().toLowerCase();
-    const targetSection = searchSections[query];
-
-    if (targetSection) {
-        // Прокрутка к выбранной секции
-        document.querySelector(targetSection).scrollIntoView({ behavior: 'smooth' });
-        document.getElementById('search-input').value = ''; // Очистка поля поиска
-        document.querySelector('.search-container').style.display = 'none'; // Скрыть поле поиска после поиска
-    } else {
-        alert('Секция не найдена. Попробуйте другой запрос.');
-    }
-});
-// Закрытие модального окна при нажатии на крестик
-document.querySelector(".close-button").addEventListener("click", function() {
-    const modal = document.getElementById("confirmation-modal");
-    modal.style.display = "none"; // Скрыть модальное окно
-});
-
-// Закрытие модального окна при клике вне его области
-window.addEventListener("click", function(event) {
-    const modal = document.getElementById("confirmation-modal");
-    if (event.target === modal) {
-        modal.style.display = "none"; // Скрыть модальное окно
-    }
-});
-
-// проба
 const contentData = {
     depilacja: `
   
@@ -79,7 +12,7 @@ const contentData = {
             <p>Skuteczna metoda usuwania owłosienia na stałe. Efekty widoczne już po kilku zabiegach.</p>
             <a href="#contact" class="cta-button">Zapisz się</a>
           </div>
-          <img src="imeges/laser.jpg" alt="Depilacja Laserowa">
+          <img src="assets/images/laser.jpg" alt="Depilacja Laserowa">
         </div>
         <div class="grid-item">
           <div class="overlay">
@@ -87,7 +20,7 @@ const contentData = {
             <p>Szybka i skuteczna metoda usuwania włosów na dłuższy czas.</p>
             <a href="#contact" class="cta-button">Zapisz się</a>
           </div>
-          <img src="imeges/lasernogi.jpg" alt="Depilacja Woskiem">
+          <img src="assets/images/lasergolova.jpg" alt="Depilacja Woskiem">
         </div>
         <div class="grid-item">
           <div class="overlay">
@@ -95,7 +28,7 @@ const contentData = {
             <p>Naturalna metoda usuwania owłosienia, delikatna dla skóry.</p>
             <a href="#contact" class="cta-button">Zapisz się</a>
           </div>
-          <img src="imeges/lasergolova.jpg" alt="Depilacja Cukrowa">
+          <img src="assets/images/lasernogi.jpg" alt="Depilacja Cukrowa">
         </div>
         <div class="grid-item">
           <div class="overlay">
@@ -103,7 +36,7 @@ const contentData = {
             <p>Bezbolesne usuwanie włosów, idealne dla osób z wrażliwą skórą.</p>
             <a href="#contact" class="cta-button">Zapisz się</a>
           </div>
-          <img src="imeges/laser.jpg" alt="Depilacja Kremem">
+          <img src="assets/images/laser.jpg" alt="Depilacja Kremem">
         </div>
       </div>
     </div>
@@ -121,7 +54,7 @@ const contentData = {
             <p>Relaksacja mięśni i redukcja stresu. Odpowiedni dla osób w każdym wieku.</p>
             <a href="#contact" class="cta-button">Zapisz się</a>
           </div>
-          <img src="imeges/massaz body.jpg" alt="Masaż klasyczny">
+          <img src="assets/images/massaz body.jpg" alt="Masaż klasyczny">
         </div>
         <div class="grid-item">
           <div class="overlay">
@@ -129,7 +62,7 @@ const contentData = {
             <p>Głęboki masaż z elementami rozciągania, ukierunkowany na równowagę energetyczną.</p>
             <a href="#contact" class="cta-button">Zapisz się</a>
           </div>
-          <img src="imeges/massaz.jpg" alt="Masaż tajski">
+          <img src="assets/images/massaz face.jpg" alt="Masaż tajski">
         </div>
         <div class="grid-item">
           <div class="overlay">
@@ -137,7 +70,7 @@ const contentData = {
             <p>Poprawa krążenia limfy i usuwanie toksyn z organizmu.</p>
             <a href="#contact" class="cta-button">Zapisz się</a>
           </div>
-          <img src="imeges/massaz face.jpg" alt="Masaż limfatyczny">
+          <img src="assets/images/massaz.jpg" alt="Masaż limfatyczny">
         </div>
         <div class="grid-item">
           <div class="overlay">
@@ -145,7 +78,7 @@ const contentData = {
             <p>Ujędrnienie skóry i redukcja cellulitu.</p>
             <a href="#contact" class="cta-button">Zapisz się</a>
           </div>
-          <img src="imeges/massaz body.jpg" alt="Masaż antycellulitowy">
+          <img src="assets/images/massaz body.jpg" alt="Masaż antycellulitowy">
         </div>
       </div>
     </div>
@@ -164,7 +97,7 @@ const contentData = {
             <p>Redukcja zmarszczek mimicznych. Szybkie i trwałe efekty.</p>
             <a href="#contact" class="cta-button">Zapisać się</a>
           </div>
-          <img src="imeges/botox.jpg" alt="Botox">
+          <img src="assets/images/botox.jpg" alt="Botox">
         </div>
         <div class="grid-item">
           <div class="overlay">
@@ -172,7 +105,7 @@ const contentData = {
             <p>Nawilżenie i wypełnienie zmarszczek. Widoczne efekty już po pierwszym zabiegu.</p>
             <a href="#contact" class="cta-button">Zapisać się</a>
           </div>
-          <img src="imeges/Kwas_Hialuronowy.jpg" alt="Kwas Hialuronowy">
+          <img src="assets/images/Kwas_Hialuronowy.jpg" alt="Kwas Hialuronowy">
         </div>
         <div class="grid-item">
           <div class="overlay">
@@ -180,7 +113,7 @@ const contentData = {
             <p>Poprawa jędrności skóry oraz jej regeneracja.</p>
             <a href="#contact" class="cta-button">Zapisać się</a>
           </div>
-          <img src="imeges/mezo.jpg" alt="Mezoterapia">
+          <img src="assets/images/mezo.jpg" alt="Mezoterapia">
         </div>
         <div class="grid-item">
           <div class="overlay">
@@ -188,7 +121,7 @@ const contentData = {
             <p>Naturalny efekt liftingu bez skalpela.</p>
             <a href="#contact" class="cta-button">Zapisać się</a>
           </div>
-          <img src="imeges/lifting.jpg" alt="Lifting">
+          <img src="assets/images/lifting.jpg" alt="Lifting">
         </div>
       </div>
     </div>
@@ -205,7 +138,6 @@ const contentData = {
     });
     event.target.classList.add("active");
   }
-  
   // Показать контент по умолчанию
   showContent('medycyna');
   

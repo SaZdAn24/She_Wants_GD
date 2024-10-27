@@ -1,0 +1,93 @@
+/* Адаптивный дизайн для iPhone 8 и iPhone 14 */
+@media only screen and (max-width: 390px) {
+    
+    /* Основной отступ */
+    .top-bar,
+    .main-header,
+    .about,
+    .contact {
+        padding: 10px 20px;
+    }
+    
+    /* Логотип и текст бренда */
+    .logo img {
+        max-width: 60px;
+    }
+    .brand-text .brand-name {
+        font-size: 16px;
+    }
+    .brand-text .specialization {
+        font-size: 10px;
+    }
+    
+    /* Навигация */
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    nav ul li a {
+        font-size: 14px;
+    }
+    
+    /* Кнопка записи и поиска */
+    .book-button {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+    #search-input,
+    #search-button {
+        font-size: 12px;
+    }
+    
+    /* Секция о нас */
+    .about h2 {
+        font-size: 28px;
+    }
+    .about p {
+        font-size: 16px;
+    }
+    
+    /* Сетка услуг */
+    .grid {
+        grid-template-columns: 1fr; 
+    }
+    .grid-item img {
+        height: 300px; 
+    }
+    .overlay h3 {
+        font-size: 20px;
+    }
+    .overlay p {
+        font-size: 14px;
+    }
+    
+    /* Контактная форма */
+    .contact h2 {
+        font-size: 30px;
+    }
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 14px;
+        padding: 10px;
+    }
+    .contact-form button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+  
+    /* Модальное окно */
+    .modal-content {
+        width: 90%; 
+        margin: 20% auto;
+    }
+    .modal-content h2 {
+        font-size: 18px;
+    }
+    .modal-content p {
+        font-size: 14px;
+    }
+  }
