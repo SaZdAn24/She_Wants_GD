@@ -10,6 +10,7 @@ const contentData = {
           <div class="overlay">
             <h3>Depilacja Laserowa</h3>
             <p>Skuteczna metoda usuwania owłosienia na stałe. Efekty widoczne już po kilku zabiegach.</p>
+            <span class="open-modal-btn">➔</span>
             <a href="#contact" class="cta-button">Zapisz się</a>
           </div>
           <img src="assets/images/laser.jpg" alt="Depilacja Laserowa">
@@ -18,6 +19,7 @@ const contentData = {
           <div class="overlay">
             <h3>Depilacja Woskiem</h3>
             <p>Szybka i skuteczna metoda usuwania włosów na dłuższy czas.</p>
+            <span class="open-modal-btn">➔</span>
             <a href="#contact" class="cta-button">Zapisz się</a>
           </div>
           <img src="assets/images/lasergolova.jpg" alt="Depilacja Woskiem">
@@ -26,6 +28,7 @@ const contentData = {
           <div class="overlay">
             <h3>Depilacja Cukrowa</h3>
             <p>Naturalna metoda usuwania owłosienia, delikatna dla skóry.</p>
+            <span class="open-modal-btn">➔</span>
             <a href="#contact" class="cta-button">Zapisz się</a>
           </div>
           <img src="assets/images/lasernogi.jpg" alt="Depilacja Cukrowa">
@@ -34,6 +37,7 @@ const contentData = {
           <div class="overlay">
             <h3>Depilacja Kremem</h3>
             <p>Bezbolesne usuwanie włosów, idealne dla osób z wrażliwą skórą.</p>
+            <span class="open-modal-btn">➔</span>
             <a href="#contact" class="cta-button">Zapisz się</a>
           </div>
           <img src="assets/images/laser.jpg" alt="Depilacja Kremem">
@@ -52,6 +56,7 @@ const contentData = {
           <div class="overlay">
             <h3>Masaż Klasyczny</h3>
             <p>Relaksacja mięśni i redukcja stresu. Odpowiedni dla osób w każdym wieku.</p>
+            <span class="open-modal-btn">➔</span>
             <a href="#contact" class="cta-button">Zapisz się</a>
           </div>
           <img src="assets/images/massaz body.jpg" alt="Masaż klasyczny">
@@ -60,6 +65,7 @@ const contentData = {
           <div class="overlay">
             <h3>Masaż Tajski</h3>
             <p>Głęboki masaż z elementami rozciągania, ukierunkowany na równowagę energetyczną.</p>
+            <span class="open-modal-btn">➔</span>
             <a href="#contact" class="cta-button">Zapisz się</a>
           </div>
           <img src="assets/images/massaz face.jpg" alt="Masaż tajski">
@@ -68,6 +74,7 @@ const contentData = {
           <div class="overlay">
             <h3>Masaż Limfatyczny</h3>
             <p>Poprawa krążenia limfy i usuwanie toksyn z organizmu.</p>
+            <span class="open-modal-btn">➔</span>
             <a href="#contact" class="cta-button">Zapisz się</a>
           </div>
           <img src="assets/images/massaz.jpg" alt="Masaż limfatyczny">
@@ -76,6 +83,7 @@ const contentData = {
           <div class="overlay">
             <h3>Masaż Antycellulitowy</h3>
             <p>Ujędrnienie skóry i redukcja cellulitu.</p>
+            <span class="open-modal-btn">➔</span>
             <a href="#contact" class="cta-button">Zapisz się</a>
           </div>
           <img src="assets/images/massaz body.jpg" alt="Masaż antycellulitowy">
@@ -95,6 +103,7 @@ const contentData = {
           <div class="overlay">
             <h3>Botox</h3>
             <p>Redukcja zmarszczek mimicznych. Szybkie i trwałe efekty.</p>
+            <span class="open-modal-btn">➔</span>
             <a href="#contact" class="cta-button">Zapisać się</a>
           </div>
           <img src="assets/images/botox.jpg" alt="Botox">
@@ -103,6 +112,7 @@ const contentData = {
           <div class="overlay">
             <h3>Kwas Hialuronowy</h3>
             <p>Nawilżenie i wypełnienie zmarszczek. Widoczne efekty już po pierwszym zabiegu.</p>
+            <span class="open-modal-btn">➔</span>
             <a href="#contact" class="cta-button">Zapisać się</a>
           </div>
           <img src="assets/images/Kwas_Hialuronowy.jpg" alt="Kwas Hialuronowy">
@@ -111,6 +121,7 @@ const contentData = {
           <div class="overlay">
             <h3>Mezoterapia</h3>
             <p>Poprawa jędrności skóry oraz jej regeneracja.</p>
+            <span class="open-modal-btn">➔</span>
             <a href="#contact" class="cta-button">Zapisać się</a>
           </div>
           <img src="assets/images/mezo.jpg" alt="Mezoterapia">
@@ -119,6 +130,7 @@ const contentData = {
           <div class="overlay">
             <h3>Lifting</h3>
             <p>Naturalny efekt liftingu bez skalpela.</p>
+            <span class="open-modal-btn">➔</span>
             <a href="#contact" class="cta-button">Zapisać się</a>
           </div>
           <img src="assets/images/lifting.jpg" alt="Lifting">

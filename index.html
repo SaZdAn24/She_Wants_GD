@@ -16,6 +16,8 @@
   <link rel="stylesheet" href="css/responsive.css">
   <link rel="stylesheet" href="css/cards.css">
   <link rel="stylesheet" href="css/modalCards.css">
+  <link rel="stylesheet" href="css/modalProcedureWindow.css">
+
 </head>
 <body>
 <!-- Шапка с иконками и переключением языка -->
@@ -145,11 +147,62 @@
   <ul id="results-list"></ul>
 </div>
 
+<!-- Okno modalne dla zabiegu botoksu -->
+<div class="modal" id="procedureModal">
+  <div class="modal-content">
+    <span class="close-modal">&times;</span>
+    <h3>Zabieg Botoksu</h3>
+    <p>Zabieg botoksu to sprawdzony sposób na redukcję zmarszczek mimicznych i poprawę ogólnego napięcia skóry. Główne obszary obejmują czoło, międzybrwi i okolice oczu.</p>
+    <p>Efekt pojawia się w ciągu kilku dni, utrzymując rezultat przez 3-6 miesięcy, nadając twarzy świeży i zadbany wygląd.</p>
+
+    <!-- Blok "Przed i Po" -->
+    <div class="before-after">
+      <div class="before">
+        <h4>Przed</h4>
+        <img src="assets/do_posle/botox_do.png" alt="Przed zabiegiem botoksu">
+      </div>
+      <div class="after">
+        <h4>Po</h4>
+        <img src="assets/do_posle/botox_posle.png" alt="Po zabiegu botoksu">
+      </div>
+    </div>
+
+    <!-- Blok kosztów z liniami pionowymi -->
+    <div class="pricing">
+      <h4>Koszt zabiegu:</h4>
+      <div class="pricing-options">
+        <div class="pricing-item">
+          <span>1 strefa</span>
+          <span>od 400 PLN</span>
+        </div>
+        <div class="separator"></div>
+        <div class="pricing-item">
+          <span>2 strefy</span>
+          <span>od 750 PLN</span>
+        </div>
+        <div class="separator"></div>
+        <div class="pricing-item">
+          <span>3 strefy</span>
+          <span>od 1000 PLN</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Przycisk rezerwacji -->
+    <div class="booking-button-container">
+      <button class="booking-button">Zarezerwuj zabieg</button>
+    </div>
+  </div>
+</div>
+
+
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
   <script src="js/formEmail.js"></script>
   <script src="js/quest.js"></script>
   <script src="js/formEmail.js"></script>
   <script src="js/procedureСards.js"></script>
+  <script src="js/modalProcedureWindow.js"></script>
+
 
 
 </body>

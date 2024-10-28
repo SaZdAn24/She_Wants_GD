@@ -1,14 +1,32 @@
 :root {
-    --main-font: 'Montserrat', sans-serif;
-    --decorative-font: 'Velour', serif;
-    --gold-color: #f9e49d;
-    --background-color: #fff;
-    --text-color: #333;
-  }
-  body {
-    font-family: var(--main-font);
-    margin: 0;
-    padding: 0;
-    background-color: #f8edde;
-  }
-  
+  --main-font: 'Montserrat', sans-serif;
+  --decorative-font: 'Velour', serif;
+  --gold-color: #f9e49d;
+  --background-color: #fff;
+  --text-color: #333;
+}
+
+@font-face {
+  font-family: 'Velour';
+  src: url('/fonts/Velour-Regular.woff2') format('woff2'),
+       url('/fonts/Velour-Regular.woff') format('woff'),
+       url('/fonts/Velour-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat.woff2') format('woff2'),
+       url('/fonts/Montserrat.woff') format('woff'),
+       url('/fonts/Montserrat.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: var(--main-font);
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+}
