@@ -1,6 +1,6 @@
 
 // Закрытие модального окна при нажатии на крестик
-document.querySelector(".close-button").addEventListener("click", function() {
+document.querySelector(".close-button-thank").addEventListener("click", function() {
     const modal = document.getElementById("confirmation-modal");
     modal.style.display = "none"; // Скрыть модальное окно
 });
